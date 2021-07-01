@@ -1,0 +1,55 @@
+﻿@page
+@model RoomBooking.Pages.RoomRecord.IndexModel
+
+@{ ViewData["Title"] = "Index"; }
+
+<section class="main">
+    <div class="head-text">
+        <h2>Register New Customer</h2>
+        <img src="https://c8.alamy.com/comp/H6H49A/hotel-booking-reservation-form-concept-H6H49A.jpg" class="img-fluid" alt="Responsive image">
+    </div>
+
+</section>
+<!--for creating new record for rooom record-->
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rooms[0].RoomNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rooms[0].RoomType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rooms[0].Fair)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Rooms)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.RoomNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.RoomType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Fair)
+    </td>
+    <td>
+        <a asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
+        <a asp-page="./Details" asp-route-id="@item.id">Details</a> |
+        <a asp-page="./Delete" asp-route-id="@item.id">Delete</a>
+    </td>
+</tr>
+}
+    </tbody>
+</table>
+
+<img src="https://contenthub-static.grammarly.com/blog/wp-content/uploads/2017/10/thank-you.jpg" class="img-fluid" alt="Responsive image">

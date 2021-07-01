@@ -1,0 +1,37 @@
+﻿@page
+@model RoomBooking.Pages.RoomRecord.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Rooms</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rooms.RoomNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rooms.RoomNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rooms.RoomType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rooms.RoomType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rooms.Fair)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rooms.Fair)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Rooms.id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

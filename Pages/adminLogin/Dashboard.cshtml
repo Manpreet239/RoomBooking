@@ -1,0 +1,26 @@
+﻿@page
+@model RoomBooking.Pages.adminLogin.DashboardModel
+@{
+}
+
+<h1>Welcome to the Admin Zone </h1>
+
+<ul>
+    <li class="nav-item">
+        <a class="nav-link btn btn-danger" asp-area="" asp-page="/Client/Index">Customer</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link btn btn-danger" asp-area="" asp-page="/RoomRecord/Index">Room</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link btn btn-danger" asp-area="" asp-page="/Billing/Index">Billing</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link btn btn-danger" asp-area="" asp-page="/Employee/Index">Staff</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link btn btn-danger" asp-area="" asp-page="/staffSalary/Index">Salary</a>
+    </li>
+</ul>

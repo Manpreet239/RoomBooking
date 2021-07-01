@@ -1,0 +1,54 @@
+﻿@page
+@model RoomBooking.Pages.Billing.IndexModel
+
+@{ ViewData["Title"] = "Index"; }
+
+
+
+<section class="main">
+    <div class="head-text">
+        <h2>Add Billing Here</h2>
+        <img src="https://www.wpexplorer.com/wp-content/uploads/best-hotel-booking-form-wordpress-plugins.jpg" class="img-fluid" alt="Responsive image">
+    </div>
+
+</section>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Payment[0].Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Payment[0].Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Payment[0].PaymentDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Payment)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Customer)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Amount)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PaymentDate)
+    </td>
+    <td>
+        <a asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
+        <a asp-page="./Details" asp-route-id="@item.id">Details</a> |
+        <a asp-page="./Delete" asp-route-id="@item.id">Delete</a>
+    </td>
+</tr>}
+    </tbody>
+</table>

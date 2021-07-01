@@ -1,0 +1,61 @@
+﻿@page
+@model RoomBooking.Pages.Employee.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section class="main">
+    <div class="head-text">
+        <h2>New Employee Registration</h2>
+        <img src="data:image/jpeg;base64,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" class="img-fluid" alt="Responsive image">
+    </div>
+
+</section>
+<!--for creating new record forEmployees-->
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff[0].Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff[0].Designation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Staff)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Designation)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
